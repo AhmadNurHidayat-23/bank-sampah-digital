@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+@import './base.css';
+@import './onboarding.css';
+@import './workspace.css';
+@import './management.css';
+@import './responsive.css';
+@source '../js';

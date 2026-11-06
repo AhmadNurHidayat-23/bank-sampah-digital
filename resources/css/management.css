@@ -1,0 +1,130 @@
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+.categories article {
+    border: 1px solid var(--line);
+    background: #fffef8;
+    padding: 24px;
+}
+.categories h3 {
+    margin-bottom: 14px;
+}
+.categories p {
+    font-size: 12px;
+    min-height: 65px;
+}
+.categories article > strong {
+    display: block;
+    margin-top: 28px;
+    font-size: 23px;
+    letter-spacing: -0.5px;
+}
+.categories strong small {
+    display: inline;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+.audit-list article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-top: 1px solid var(--line);
+    padding: 25px 0;
+    gap: 25px;
+}
+.audit-list h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.audit-list pre {
+    background: #edf0e3;
+    padding: 16px;
+    font-size: 11px;
+    overflow: auto;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin: 0;
+}
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: #25332275;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 100;
+    overflow-y: auto;
+}
+.modal {
+    background: #fffef6;
+    padding: 35px;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    max-height: 95vh;
+    overflow-y: auto;
+}
+.modal h2 {
+    font-size: 28px;
+    margin: 12px 0 18px;
+}
+.modal p {
+    font-size: 13px;
+}
+.modal .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.modal .btn {
+    margin-top: 16px;
+}
+.filters {
+    display: flex;
+    align-items: end;
+    gap: 20px;
+    margin: 25px 0;
+}
+.filters label {
+    margin: 0;
+}
+.report-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--line);
+    margin: 30px 0;
+}
+.report-stats > div {
+    padding: 25px;
+    border-right: 1px solid var(--line);
+}
+.report-stats > div:last-child {
+    border: 0;
+}
+.report-stats span {
+    font-size: 11px;
+    color: var(--muted);
+}
+.report-stats strong {
+    font-size: 30px;
+    display: block;
+    margin-top: 12px;
+    letter-spacing: -1px;
+}
+.weight-summary {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+.weight-summary > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid var(--line);
+    padding: 14px;
+    font-size: 11px;
+}
+
