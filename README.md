@@ -64,3 +64,19 @@ Tes memeriksa registrasi, saldo terverifikasi, pembatasan akses, ketepatan berat
 Pencatatan tunai tidak mengirim transfer bank dan tidak mengklaim transaksi bank sungguhan. Saldo adalah kewajiban bank sampah kepada anggota. Laporan keuangan memakai tanggal mutasi; rekap berat memakai tanggal pencatatan setoran yang masih terverifikasi. Pengurus bertanggung jawab mencocokkan kas fisik dengan catatan.
 
 Gunakan HTTPS, `APP_DEBUG=false`, akun petugas terpercaya, serta pencadangan database untuk pemakaian operasional. Arahkan document root ke `public/`. Kredensial, database, screenshot, dependensi lokal, dan build tidak disertakan di repository. Berkas kode aplikasi dibatasi maksimal 300 baris.
+
+
+## Panduan shell instalasi
+
+Contoh instalasi di atas menggunakan PowerShell. Jalankan dari direktori root proyek, tempat berkas `artisan`, `composer.json`, dan `.env.example` berada.
+
+Untuk Bash di Linux/macOS, ganti hanya dua perintah khusus PowerShell berikut pada posisi yang sama dalam urutan instalasi:
+
+```bash
+# Pengganti Copy-Item .env.example .env; pertahankan .env yang sudah ada.
+[ -f .env ] || cp .env.example .env
+# Pengganti New-Item untuk SQLite; tidak mengosongkan database yang sudah ada.
+touch database/database.sqlite
+```
+
+Perintah Composer, Artisan, dan npm lainnya tetap mengikuti urutan di atas. Salin `.env` sebelum `php artisan key:generate`, lalu siapkan file SQLite sebelum `php artisan migrate --seed`. Jangan menimpa `.env` atau membuat ulang kunci aplikasi pada instalasi yang sudah digunakan.
