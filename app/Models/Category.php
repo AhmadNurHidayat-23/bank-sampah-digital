@@ -12,4 +12,14 @@ class Category extends Model
     {
         return ['active' => 'boolean', 'price' => 'integer'];
     }
+
+    public function deposits()
+    {
+        return $this->hasMany(Deposit::class);
+    }
+
+    public function scopeActive($query)
+    {
+        return $query->where('active', true);
+    }
 }
